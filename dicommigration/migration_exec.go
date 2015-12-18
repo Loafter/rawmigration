@@ -5,6 +5,7 @@ import (
 	//"os"
 	"log"
 	//"os/exec"
+	"os"
 )
 
 type DicomSendData struct {
@@ -19,9 +20,9 @@ type ParallelRawDicomSend struct {
 func (ParallelRawDicomSend)DoAction(pb* parralels.ParralelsBallancer, data interface{}) {
 	ds := data.(DicomSendData)
 	defer func() {
-		/*if err := os.Remove(ds.FileName); err != nil {
+		if err := os.Remove(ds.FileName); err != nil {
 			log.Println(err)
-		}*/
+		}
 	}()
 	//dcmconv := os.Getenv("DCMCONV")
 	log.Println("info: file done -->",ds)
