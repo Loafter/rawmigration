@@ -16,9 +16,9 @@ _test
 _cgo_defun.c
 _cgo_gotypes.go
 _cgo_export.*
-
+.idea
 _testmain.go
-
+rawmigration.iml
 *.exe
 *.test
 *.prof
