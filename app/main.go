@@ -3,6 +3,7 @@ import (
 	"flag"
 	"log"
 	"rawmigration/dicommigration"
+	"strconv"
 )
 
 func main() {
@@ -12,7 +13,7 @@ func main() {
 	target := flag.String("target", "c:\\Temp", "a string")
 	parallel:=flag.Int("parallels",12, "an int")
 	flag.Parse()
-	if err:= dicommigration.WalkAndSend(*target,*server,string(*port),*aet ,*parallel);err!=nil{
+	if err:= dicommigration.WalkAndSend(*target,*server,strconv.Itoa(*port),*aet ,*parallel);err!=nil{
 		log.Println(err)
 	}
 }

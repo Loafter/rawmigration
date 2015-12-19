@@ -15,7 +15,7 @@ func WalkAndSend(dir string, srv string, port string, aet string, par int) error
 		i++
 		log.Println(info.Name())
 		if !info.IsDir() {
-			if pb.SleepedJobs() >= par * 8 {
+			if pb.SleepedJobs() >= par * 40 {
 				pb.WaitAll()
 				log.Println("info: wait done")
 			}
