@@ -16,7 +16,7 @@ DefaultDirName={pf}\Dicom Migration Tool
 DefaultGroupName=Dicom Migration Tool
 DisableProgramGroupPage=yes
 OutputDir=C:\Users\212402712\Desktop
-OutputBaseFilename=setup
+OutputBaseFilename=Raw DICOM Migration
 Compression=lzma
 SolidCompression=yes
 [Registry]
@@ -33,7 +33,7 @@ Source: "C:\Users\212402712\go\src\rawmigration\app\dicommigration.exe"; DestDir
 Source: "C:\Users\212402712\go\src\rawmigration\app\storescu.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\212402712\go\src\rawmigration\app\gdcmconv.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\212402712\go\src\rawmigration\app\vc_redist.x86.exe"; DestDir: "{app}"; Flags: ignoreversion
-
+Source: "C:\Users\212402712\go\src\rawmigration\app\readme.txt"; DestDir: "{app}"; Flags: isreadme
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 [Run]
 Filename: "{app}\vc_redist.x86.exe"; Parameters: "/passive"
